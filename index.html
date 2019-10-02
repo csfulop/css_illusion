@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS & JS Visual</title>
+    <style>
+        body {
+            --illusion-time: 60s;
+            --illusion-timing-function: linear;
+            --illusion-iteration-count: infinite;
+            --illusion-background: url("dot.gif");
+        }
+        #card1 {
+            position: absolute;
+            top: 50%;
+            margin-top: -200px;
+            left: 50%;
+            margin-left: -200px;
+            width: 400px;
+            height: 400px;
+            background: var(--illusion-background);
+            animation-name: move;
+            animation-duration: var(--illusion-time);
+            animation-timing-function: var(--illusion-timing-function);
+            animation-iteration-count: var(--illusion-iteration-count);
+        }
+        #card2 {
+            position: absolute;
+            top: 50%;
+            margin-top: -200px;
+            left: 50%;
+            margin-left: -200px;
+            width: 400px;
+            height: 400px;
+            background: var(--illusion-background);
+            animation-name: rotate;
+            animation-duration: var(--illusion-time);
+            animation-timing-function: var(--illusion-timing-function);
+            animation-iteration-count: var(--illusion-iteration-count);
+        }
+        @keyframes rotate {
+            19% {
+                transform: rotate(180deg);
+            }
+            32% {
+                transform: rotate(360deg) scale(1.4);
+            }
+            45% {
+                transform: rotate(540deg) scale(0.7);
+            }
+            55% {
+                transform: rotate(720deg)
+            }
+            60% {
+                transform: translate(105px,105px);
+            }
+            65% {
+                transform: translate(105px,5px);
+            }
+            70% {
+                transform: translate(5px,5px);
+            }
+            77% {
+                transform: rotate(10deg);
+            }
+            86% {
+                transform: rotate(0deg);
+            }
+            93% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes move {
+            70% {
+                transform: translate(0px,0px);
+            }
+            77% {
+                transform: translate(200px,0px);
+            }
+            86% {
+                transform: translate(0px,0px);
+            }
+            93% {
+                transform: translate(0px,200px);
+            }
+            100% {
+                transform: translate(0px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="card1"></div>
+<div id="card2"></div>
+</body>
+</html>
