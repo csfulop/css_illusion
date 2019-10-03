@@ -8,15 +8,16 @@
             --illusion-timing-function: linear;
             --illusion-iteration-count: infinite;
             --illusion-background: url("dot.gif");
+            overflow: hidden;
         }
         #card1 {
             position: absolute;
             top: 50%;
-            margin-top: -200px;
+            margin-top: -300px;
             left: 50%;
-            margin-left: -200px;
-            width: 400px;
-            height: 400px;
+            margin-left: -300px;
+            width: 600px;
+            height: 600px;
             background: var(--illusion-background);
             animation-name: move;
             animation-duration: var(--illusion-time);
@@ -26,11 +27,11 @@
         #card2 {
             position: absolute;
             top: 50%;
-            margin-top: -200px;
+            margin-top: -300px;
             left: 50%;
-            margin-left: -200px;
-            width: 400px;
-            height: 400px;
+            margin-left: -300px;
+            width: 600px;
+            height: 600px;
             background: var(--illusion-background);
             animation-name: rotate;
             animation-duration: var(--illusion-time);
@@ -75,24 +76,24 @@
         @keyframes move {
             70% {
                 transform: translate(0px,0px);
-                width: 400px;
+                width: 600px;
             }
             77% {
                 transform: translate(-200px,0px);
-                width: 600px;
+                width: 800px;
             }
             86% {
-                width: 400px;
+                width: 600px;
                 transform: translate(0px,0px);
-                height: 400px;
+                height: 600px;
             }
             93% {
                 transform: translate(0px,-200px);
-                height: 600px;
+                height: 800px;
             }
             100% {
                 transform: translate(0px,0px);
-                height: 400px;
+                height: 600px;
             }
         }
     </style>
